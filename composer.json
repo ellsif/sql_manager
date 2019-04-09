@@ -1,0 +1,22 @@
+{
+  "name": "ellsif/sql_manager",
+  "description": "SQL Manage Class Generator",
+  "keywords": ["php", "sql"],
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://github.com/ellsif/sql_manager",
+  "authors": [
+    {
+      "name": "ellsif",
+      "email": "hatasu@ellsif.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ellsif\\sql_manager\\": [
+        "src/",
+        "example/"
+      ]
+    }
+  }
+}

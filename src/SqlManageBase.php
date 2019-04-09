@@ -12,7 +12,7 @@ abstract class SqlManageBase
      */
     public static function getSql($label)
     {
-        return self::getSetting($label)['sql'];
+        return static::getSetting($label)['sql'];
     }
 
     /**

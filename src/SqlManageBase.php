@@ -12,7 +12,7 @@ abstract class SqlManageBase
      */
     public static function getSql($label)
     {
-        return static::getSetting($label)['sql'];
+        return self::getSetting($label)['sql'];
     }
 
     /**
@@ -20,7 +20,7 @@ abstract class SqlManageBase
      */
     public static function getSetting($label)
     {
-        foreach (self::getSettings() as $setting) {
+        foreach (static::getSettings() as $setting) {
             if ($setting['label'] == $label) {
                 return $setting;
             }

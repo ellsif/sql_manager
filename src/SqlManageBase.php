@@ -12,9 +12,17 @@ abstract class SqlManageBase
      */
     public static function getSql($label)
     {
+        return self::getSetting($label)['sql'];
+    }
+
+    /**
+     * SQL設定を取得する。
+     */
+    public static function getSetting($label)
+    {
         foreach (self::getSettings() as $setting) {
             if ($setting['label'] == $label) {
-                return $setting['sql'];
+                return $setting;
             }
         }
         throw new \DomainException('Unknown SQL: ' . $label);

@@ -10,9 +10,13 @@ abstract class SqlManageBase
     /**
      * SQL文を取得する。
      */
-    public static function getSql($label)
+    public static function getSql($label, $args = null)
     {
-        return self::getSetting($label)['sql'];
+        $sql = self::getSetting($label)['sql'];
+        if ($args) {
+            $sql = vsprintf($sql, $args);
+        }
+        return $sql;
     }
 
     /**

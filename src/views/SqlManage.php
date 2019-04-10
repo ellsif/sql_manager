@@ -11,7 +11,7 @@ use ellsif\sql_manager\SqlManageBase;
 class <?php echo $className ?> extends SqlManageBase
 {
 <?php foreach($settings as $idx => $setting) : ?>
-	public const <?php echo $setting['name'] ?> = "<?php echo $setting['label'] ?>";
+	public const <?php echo $setting['name'] ?> = '<?php echo $setting['label'] ?>';
 <?php endforeach ?>
 
     public static function getSettings()
